@@ -1,64 +1,72 @@
 import 'dart:convert';
-import "dart:io";
+import 'dart:io';
+
+import 'package:http/http.dart' as http;
+import 'package:googleapis_auth/auth_io.dart';
 
 class SaveManager {
-  String path;
-  late Map<String, dynamic> save;
+  static const firebaseUrl = String.fromEnvironment('FIREBASE_URL');
 
-  SaveManager(this.path) {
-    getOrCreateFile();
-    save = read();
+  final Map<String, dynamic> save = {};
+
+  late Map<String, dynamic> credentialsJson;
+  late AccessCredentials creds;
+
+  SaveManager(credentialsPath) {
+    credentialsJson = getCredentials(credentialsPath);
   }
 
-  File getOrCreateFile() {
+  Map<String, dynamic> getCredentials(path) {
     final file = File(path);
-
     if (!file.existsSync()) {
-      file.createSync(recursive: true);
-      writeToFile(jsonEncode({'remarkable_numbers': [], 'results': []}));
-      return getOrCreateFile();
+      throw Exception('File `$path` does NOT exists');
     }
 
-    return file;
+    return jsonDecode(file.readAsStringSync());
   }
 
-  void writeToFile(content) {
-    final file = File(path);
-    if (file.existsSync()) {
-      file.writeAsStringSync(content);
-    }
+  Future<AccessCredentials> obtainCredentials(credentialsJson) async {
+    final accountCredentials =
+        ServiceAccountCredentials.fromJson(credentialsJson);
+    var scopes = [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/firebase.database"
+    ];
+
+    var client = http.Client();
+    AccessCredentials credentials =
+        await obtainAccessCredentialsViaServiceAccount(
+            accountCredentials, scopes, client);
+
+    client.close();
+    return credentials;
   }
 
-  void persistToFile() {
-    writeToFile(jsonEncode(save));
-  }
-
-  Map<String, dynamic> read() {
-    final content = getOrCreateFile().readAsStringSync();
-    return jsonDecode(content);
-  }
-
-  Map<String, dynamic> initEmptySave() {
-    return {'remarkable_numbers': [], 'results': []};
-  }
-
-  List<dynamic> getListFromSave(String key) {
-    dynamic list;
-    try {
-      list = save[key];
-    } on FormatException {
-      return [];
-    }
-
-    if (list.isNotEmpty) {
-      return list;
+  dynamic parseResponse(http.Response response, dynamic defaultValue) {
+    if (response.statusCode == 200) {
+      return jsonDecode(response.body) ?? defaultValue;
     } else {
-      return [];
+      throw Exception(response.body);
     }
+  }
+
+  init() async {
+    creds = await obtainCredentials(credentialsJson);
+    if (creds.runtimeType != AccessCredentials) {
+      throw Exception("There was an error during authentication");
+    }
+
+    final resRemarkableNumbers = await http.get(Uri.https(firebaseUrl,
+        'remarkable_numbers.json', {'access_token': creds.accessToken.data}));
+    save['remarkable_numbers'] = parseResponse(resRemarkableNumbers, []);
+
+    final resResults = await http.get(Uri.https(
+        firebaseUrl, 'results.json', {'access_token': creds.accessToken.data}));
+    save['results'] = parseResponse(resResults, []);
   }
 
   List<int> getPullsToProcess(int latestPull) {
-    final allResults = getListFromSave('results');
+    final allResults = save['results'];
     List<int> processedPR = [];
     for (final result in allResults) {
       if (result['number'] is int) {
@@ -68,11 +76,10 @@ class SaveManager {
 
     processedPR.sort();
 
-    final remarkableNumbers = getListFromSave('remarkable_numbers');
-    remarkableNumbers.sort();
+    save['remarkable_numbers'].sort();
 
     List<int> pullsToProcess = [];
-    for (final number in remarkableNumbers) {
+    for (final number in save['remarkable_numbers']) {
       if (number is int &&
           number <= latestPull &&
           !processedPR.contains(number)) {
@@ -107,7 +114,16 @@ class SaveManager {
     if (pullData.isEmpty) return;
 
     save['results'].add(pullData);
+  }
 
-    persistToFile();
+  void persist() async {
+    final res = await http.put(
+        Uri.https(firebaseUrl, 'results.json',
+            {'access_token': creds.accessToken.data}),
+        body: jsonEncode(save['results']));
+
+    if (res.statusCode != 200) {
+      throw Exception(res.body);
+    }
   }
 }

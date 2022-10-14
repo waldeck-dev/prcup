@@ -46,3 +46,5 @@ app.*.map.json
 .vscode/
 .env
 data/
+firebase_options.dart
+prcup-credentials.json
