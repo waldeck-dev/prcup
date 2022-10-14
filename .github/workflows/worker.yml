@@ -1,0 +1,27 @@
+name: Dart
+
+on:
+  schedule:
+    - cron: '42 0,12 * * *'
+
+jobs:
+  run-worker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    env:
+      GH_OWNER: ${{ secrets.GH_OWNER }}
+      GH_REPO: ${{ secrets.GH_REPO }}
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      FIREBASE_URL: ${{ secrets.FIREBASE_URL }}
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dart-lang/setup-dart@1.3
+
+      - name: Install dependencies
+        run: dart pub get
+
+      - name: Run worker
+        working-directory: ./worker
+        run: dart run worker.dart
