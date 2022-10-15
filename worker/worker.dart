@@ -2,7 +2,7 @@ import 'gh_api.dart';
 import 'save_mgr.dart';
 
 main() async {
-  final saveMgr = SaveManager();
+  final saveMgr = WorkerSaveManager();
   await saveMgr.init();
 
   final gh = GithubApi(
