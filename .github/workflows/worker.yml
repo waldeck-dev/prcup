@@ -1,8 +1,10 @@
 name: Dart
 
 on:
-  schedule:
-    - cron: '42 0,12 * * *'
+  push:
+    branches: "**"
+  #schedule:
+  #  - cron: '42 0,12 * * *'
 
 jobs:
   run-worker:
@@ -18,7 +20,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: dart-lang/setup-dart@v1.3
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+      #- uses: dart-lang/setup-dart@v1.3
 
       - name: Install dependencies
         run: flutter pub get
