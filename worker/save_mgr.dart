@@ -12,11 +12,11 @@ class SaveManager {
   late Map<String, dynamic> credentialsJson;
   late AccessCredentials creds;
 
-  SaveManager(credentialsPath) {
-    credentialsJson = getCredentials(credentialsPath);
+  SaveManager() {
+    credentialsJson = getCredentials();
   }
 
-  Map<String, dynamic> getCredentials(path) {
+  Map<String, dynamic> getCredentials() {
     const rawCreds = String.fromEnvironment('FIREBASE_SA_CREDS');
     final decodedCreds = base64.decode(base64.normalize(rawCreds));
     return jsonDecode(utf8.decode(decodedCreds));
