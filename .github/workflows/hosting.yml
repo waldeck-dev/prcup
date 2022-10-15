@@ -1,4 +1,4 @@
-name: Worker
+name: Hosting
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
         run: flutter pub get
 
       - name: Build Flutter web
-        run: flutter build --dart-define=FIREBASE_URL=${{ secrets.FIREBASE_URL }} --dart-define=FIREBASE_SA_CREDS=${{ secrets.FIREBASE_SA_CREDS }} web
+        run: flutter build web
 
       - name: Deploy to Github Pages
         run: |
