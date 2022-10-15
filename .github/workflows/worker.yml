@@ -14,6 +14,7 @@ jobs:
       GH_REPO: ${{ secrets.GH_REPO }}
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
       FIREBASE_URL: ${{ secrets.FIREBASE_URL }}
+      FIREBASE_SA_CREDS: ${{ secrets.FIREBASE_SA_CREDS }}
 
     steps:
       - uses: actions/checkout@v3

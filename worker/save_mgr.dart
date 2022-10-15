@@ -17,12 +17,9 @@ class SaveManager {
   }
 
   Map<String, dynamic> getCredentials(path) {
-    final file = File(path);
-    if (!file.existsSync()) {
-      throw Exception('File `$path` does NOT exists');
-    }
-
-    return jsonDecode(file.readAsStringSync());
+    const rawCreds = String.fromEnvironment('FIREBASE_SA_CREDS');
+    final decodedCreds = base64.decode(base64.normalize(rawCreds));
+    return jsonDecode(utf8.decode(decodedCreds));
   }
 
   Future<AccessCredentials> obtainCredentials(credentialsJson) async {
