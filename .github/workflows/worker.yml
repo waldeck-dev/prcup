@@ -11,13 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
-    env:
-      GH_OWNER: ${{ secrets.GH_OWNER }}
-      GH_REPO: ${{ secrets.GH_REPO }}
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      FIREBASE_URL: ${{ secrets.FIREBASE_URL }}
-      FIREBASE_SA_CREDS: ${{ secrets.FIREBASE_SA_CREDS }}
-
     steps:
       - uses: actions/checkout@v3
       - uses: subosito/flutter-action@v2
@@ -30,4 +23,10 @@ jobs:
 
       - name: Run worker
         working-directory: ./worker
-        run: dart run worker.dart
+        run: dart run \
+          --define=GH_OWNER=${{ secrets.GH_OWNER } \
+          --define=GH_REPO=${{ secrets.GH_REPO } \
+          --define=GH_TOKEN=${{ secrets.GH_TOKEN } \
+          --define=FIREBASE_URL=${{ secrets.FIREBASE_URL }} \
+          --define=FIREBASE_SA_CREDS=${{ secrets.FIREBASE_SA_CREDS }} \
+          worker.dart
