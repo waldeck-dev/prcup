@@ -23,11 +23,4 @@ jobs:
 
       - name: Run worker
         working-directory: ./worker
-        run: >
-          dart run 
-            --define=GH_OWNER=${{ secrets.GH_OWNER }} 
-            --define=GH_REPO=${{ secrets.GH_REPO }} 
-            --define=GH_TOKEN=${{ secrets.GH_TOKEN }} 
-            --define=FIREBASE_URL=${{ secrets.FIREBASE_URL }} 
-            --define=FIREBASE_SA_CREDS=${{ secrets.FIREBASE_SA_CREDS }} 
-            ./worker.dart
+        run: dart run --define=GH_OWNER=${{ secrets.GH_OWNER }} --define=GH_REPO=${{ secrets.GH_REPO }} --define=GH_TOKEN=${{ secrets.GH_TOKEN }} --define=FIREBASE_URL=${{ secrets.FIREBASE_URL }} --define=FIREBASE_SA_CREDS=${{ secrets.FIREBASE_SA_CREDS }} ./worker.dart
