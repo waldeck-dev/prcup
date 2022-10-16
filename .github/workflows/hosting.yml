@@ -3,6 +3,7 @@ name: Hosting
 on:
   push:
     branches: main
+    paths: 'flutter/**'
 
 jobs:
   build-web:
