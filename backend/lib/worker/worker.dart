@@ -1,5 +1,5 @@
-import 'package:prcup_worker/gh_api.dart';
-import 'package:prcup_worker/save_mgr.dart';
+import 'package:prcup_backend/worker/gh_api.dart';
+import 'package:prcup_backend/common/save_mgr.dart';
 
 main() async {
   final saveMgr = SaveManager();
