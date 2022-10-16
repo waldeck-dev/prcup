@@ -4,7 +4,6 @@ import 'package:prcup/models/result.dart';
 
 import 'widgets/commons.dart';
 import 'widgets/user_card.dart';
-import 'services/save.dart';
 
 void main() async {
   runApp(const MyApp());
@@ -49,11 +48,11 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
 
-    final saveMgr = SaveManager();
-    saveMgr.init().then((save) {
-      _loadSave(save);
-      getRankedResults(_save);
-    });
+    // final saveMgr = SaveManager();
+    // saveMgr.init().then((save) {
+    //   _loadSave(save);
+    //   getRankedResults(_save);
+    // });
   }
 
   @override

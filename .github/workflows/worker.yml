@@ -11,13 +11,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v2
-        with:
-          channel: 'stable'
+      - uses: dart-lang/setup-dart@v1.3
 
       - name: Install dependencies
-        run: flutter pub get
+        run: dart pub get
 
       - name: Run worker
         working-directory: ./worker
-        run: dart run --define=GH_OWNER=${{ secrets.GH_OWNER }} --define=GH_REPO=${{ secrets.GH_REPO }} --define=GH_TOKEN=${{ secrets.GH_TOKEN }} --define=FIREBASE_URL=${{ secrets.FIREBASE_URL }} --define=FIREBASE_SA_CREDS=${{ secrets.FIREBASE_SA_CREDS }} ./worker.dart
+        run: dart run --define=GH_OWNER=${{ secrets.GH_OWNER }} --define=GH_REPO=${{ secrets.GH_REPO }} --define=GH_TOKEN=${{ secrets.GH_TOKEN }} --define=FIREBASE_URL=${{ secrets.FIREBASE_URL }} --define=FIREBASE_SA_CREDS=${{ secrets.FIREBASE_SA_CREDS }} ./lib/worker.dart
