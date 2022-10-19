@@ -58,6 +58,8 @@ dart run \
 
 1. Compile API to executable
 ```
+cd ./backend
+dart pub get
 dart compile exe ./backend/lib/api/main.dart -o /tmp/prcup-api
 ```
 
