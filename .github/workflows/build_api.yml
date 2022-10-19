@@ -25,10 +25,10 @@ jobs:
         working-directory: ${{ env.workdir }}
         run: |
           mkdir -p /tmp/prcup \
-            && dart compile exe ./lib/api/main.dart -o /tmp/prcup/prcup-api
+            && dart compile exe ./lib/api/main.dart -o ./prcup-api
 
       - name: test
-        run: ls -la /tmp/
+        run: ls -la ${{ env.workdir }}
 
       - name: Deploy Executable
         uses: moonpathbg/scp_uploader@latest
@@ -36,5 +36,5 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          source: /tmp/prcup/
+          source: ${{ env.workdir }}/prcup-api
           target: ${{ secrets.SCP_TARGET }}
