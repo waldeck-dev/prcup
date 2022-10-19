@@ -26,7 +26,7 @@ jobs:
         run: dart compile exe ./lib/api/main.dart -o /tmp/prcup-api
 
       - name: Deploy Executable
-        run: |
+        run: >
           echo ${{ secrets.SSH_KEY }} > /tmp/sshkey.pub \
             && scp -i /tmp/sshkey.pub /tmp/prcup-api ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ SCP_TARGET }} \
             && ssh -i /tmp/sshkey.pub ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} sh ${{ SCP_TARGET }}/setup.sh \
