@@ -23,7 +23,7 @@ jobs:
 
       - name: Compile API
         working-directory: ${{ env.workdir }}
-        run: dart compile exe ./lib/api/main.dart -o /tmp/prcup-api
+        run: dart compile exe ./lib/api/main.dart -o /tmp/prcup/prcup-api
 
       - name: test
         run: ls -la /tmp/
@@ -34,5 +34,5 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          source: /tmp/prcup-api
+          source: /tmp/prcup/
           target: ${{ secrets.SCP_TARGET }}
