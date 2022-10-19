@@ -25,6 +25,9 @@ jobs:
         working-directory: ${{ env.workdir }}
         run: dart compile exe ./lib/api/main.dart -o /tmp/prcup-api
 
+      - name: test
+        run: ls -la /tmp/
+
       - name: Deploy Executable
         uses: appleboy/scp-action@master
         with:
