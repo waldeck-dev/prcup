@@ -25,15 +25,6 @@ jobs:
         working-directory: ${{ env.workdir }}
         run: dart compile exe ./lib/api/main.dart -o ./prcup-api
 
-      # - name: Upload Executable
-      #   uses: moonpathbg/scp_uploader@latest
-      #   with:
-      #     host: ${{ secrets.SSH_HOST }}
-      #     username: ${{ secrets.SSH_USER }}
-      #     key: ${{ secrets.SSH_KEY }}
-      #     source: ${{ env.workdir }}/prcup-api
-      #     target: ${{ secrets.SCP_TARGET }}
-
       - name: Deploy executable
         uses: cross-the-world/ssh-scp-ssh-pipelines@latest
         with:
@@ -41,4 +32,4 @@ jobs:
           user: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           scp: ${{ env.workdir }}/prcup-api => ${{ secrets.SCP_TARGET }}
-          last_ssh: sh setup.sh
+          last_ssh: sh ${{ secrets.SCP_TARGET }}/setup.sh
