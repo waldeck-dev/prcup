@@ -23,7 +23,9 @@ jobs:
 
       - name: Compile API
         working-directory: ${{ env.workdir }}
-        run: dart compile exe ./lib/api/main.dart -o /tmp/prcup/prcup-api
+        run: |
+          mkdir -p /tmp/prcup
+            && dart compile exe ./lib/api/main.dart -o /tmp/prcup/prcup-api
 
       - name: test
         run: ls -la /tmp/
