@@ -29,9 +29,10 @@ jobs:
         run: ls -la /tmp/
 
       - name: Deploy Executable
-        uses: alinz/ssh-scp-action@master
+        uses: moonpathbg/scp_uploader@latest
         with:
           host: ${{ secrets.SSH_HOST }}
-          user: ${{ secrets.SSH_USER }}
+          username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          scp: /tmp/prcup-api ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SCP_TARGET }}
+          source: /tmp/prcup-api
+          target: ${{ secrets.SCP_TARGET }}
