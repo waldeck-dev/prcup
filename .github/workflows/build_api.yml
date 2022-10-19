@@ -23,18 +23,22 @@ jobs:
 
       - name: Compile API
         working-directory: ${{ env.workdir }}
-        run: |
-          mkdir -p /tmp/prcup \
-            && dart compile exe ./lib/api/main.dart -o ./prcup-api
+        run: dart compile exe ./lib/api/main.dart -o ./prcup-api
 
-      - name: test
-        run: ls -la ${{ env.workdir }}
+      # - name: Upload Executable
+      #   uses: moonpathbg/scp_uploader@latest
+      #   with:
+      #     host: ${{ secrets.SSH_HOST }}
+      #     username: ${{ secrets.SSH_USER }}
+      #     key: ${{ secrets.SSH_KEY }}
+      #     source: ${{ env.workdir }}/prcup-api
+      #     target: ${{ secrets.SCP_TARGET }}
 
-      - name: Deploy Executable
-        uses: moonpathbg/scp_uploader@latest
+      - name: Deploy executable
+        uses: cross-the-world/ssh-scp-ssh-pipelines@latest
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          source: ${{ env.workdir }}/prcup-api
-          target: ${{ secrets.SCP_TARGET }}
+          scp: ${{ env.workdir }}/prcup-api => ${{ secrets.SCP_TARGET }}
+          last_ssh: sh setup.sh
