@@ -3,7 +3,7 @@ name: Compile API
 on:
   push:
     branches: main
-    #paths: backend/api/**
+    paths: backend/api/**
 
 jobs:
   compile-api:
@@ -15,7 +15,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: dart-lang/setup-dart@v1.3
 
       - name: Deploy executable
         uses: cross-the-world/ssh-scp-ssh-pipelines@latest
@@ -23,4 +22,4 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           user: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          first_ssh: sh ${{ secrets.SCP_TARGET }}/setup.sh&
+          first_ssh: sh ${{ secrets.SCP_TARGET }}/setup.sh
