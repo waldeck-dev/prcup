@@ -3,7 +3,7 @@ name: Compile API
 on:
   push:
     branches: main
-    paths: backend/api/**
+    paths: backend/lib/api/**
 
 jobs:
   compile-api:
