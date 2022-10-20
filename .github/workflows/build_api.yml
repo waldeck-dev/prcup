@@ -31,6 +31,6 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           user: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          first_ssh: sh ${{ secrets.SCP_TARGET }}/setup.sh ${{ FIREBASE_URL }} ${{ FIREBASE_SA_CREDS }}
+          first_ssh: sh ${{ secrets.SCP_TARGET }}/setup.sh ${{ secrets.FIREBASE_URL }} ${{ secrets.FIREBASE_SA_CREDS }}
           #scp: ${{ env.workdir }}/prcup-api => ${{ secrets.SCP_TARGET }}
           #last_ssh: sh ${{ secrets.SCP_TARGET }}/setup.sh
