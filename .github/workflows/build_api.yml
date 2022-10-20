@@ -3,7 +3,7 @@ name: Compile API
 on:
   push:
     branches: main
-    paths: backend/api/**
+    #paths: backend/api/**
 
 jobs:
   compile-api:
@@ -31,5 +31,6 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           user: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          scp: ${{ env.workdir }}/prcup-api => ${{ secrets.SCP_TARGET }}
-          last_ssh: sh ${{ secrets.SCP_TARGET }}/setup.sh
+          first_ssh: sh ${{ secrets.SCP_TARGET }}/setup.sh ${{ FIREBASE_URL }} ${{ FIREBASE_SA_CREDS }}
+          #scp: ${{ env.workdir }}/prcup-api => ${{ secrets.SCP_TARGET }}
+          #last_ssh: sh ${{ secrets.SCP_TARGET }}/setup.sh
