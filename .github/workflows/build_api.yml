@@ -17,20 +17,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: dart-lang/setup-dart@v1.3
 
-      # - name: Install dependencies
-      #   working-directory: ${{ env.workdir }}
-      #   run: dart pub get
-
-      # - name: Compile API
-      #   working-directory: ${{ env.workdir }}
-      #   run: dart compile exe ./lib/api/main.dart -o ./prcup-api
-
       - name: Deploy executable
         uses: cross-the-world/ssh-scp-ssh-pipelines@latest
         with:
           host: ${{ secrets.SSH_HOST }}
           user: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
-          first_ssh: sh ${{ secrets.SCP_TARGET }}/setup.sh ${{ secrets.FIREBASE_URL }} ${{ secrets.FIREBASE_SA_CREDS }}
-          #scp: ${{ env.workdir }}/prcup-api => ${{ secrets.SCP_TARGET }}
-          #last_ssh: sh ${{ secrets.SCP_TARGET }}/setup.sh
+          first_ssh: sh ${{ secrets.SCP_TARGET }}/setup.sh&
