@@ -26,15 +26,18 @@ The technical stack is made up as follows:
 
 ### Environment variables
 
-*TODO ...*
-
 | Env variable | Details |
 | --- | --- |
+| `FIREBASE_URL` | url to your Firebase Realtime Database (without `https://`) |
 | `FIREBASE_SA_CREDS` | must be a base64 representation of your Service Account credentials (a JSON file) |
+| `GH_REPO` | Github repository where the action takes place |
+| `GH_OWNER` | repository's owner (Github username) |
+| `GH_TOKEN` | token to authenticate requests while using Github API |
 
 ### Database
 
 *TODO ...*
+
 ### Worker
 
 1. Install dependencies
@@ -69,4 +72,7 @@ dart compile exe ./backend/lib/api/main.dart -o /tmp/prcup-api
 
 ### Web app
 
-*TODO ...*
+```sh
+cd ./flutter
+flutter run -d chrome
+```
