@@ -3,13 +3,15 @@ name: Hosting
 on:
   push:
     branches: main
-    paths: 'flutter/**'
+    # paths: 'flutter/**'
 
 jobs:
   build-web:
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    working-directory: ./flutter
+
+    env:
+      workdir: ./flutter
 
     steps:
       - uses: actions/checkout@v3
@@ -17,13 +19,16 @@ jobs:
         with:
           channel: 'stable'
 
-      - name: Install dependencies 
+      - name: Install dependencies
+        working-directory: ${{ env.workdir }}
         run: flutter pub get
 
       - name: Build Flutter web
+        working-directory: ${{ env.workdir }}
         run: flutter build web
 
       - name: Deploy to Github Pages
+        working-directory: ${{ env.workdir }}
         run: |
           cd build/web
           git config --global user.email waldeck-dev
