@@ -3,7 +3,7 @@ name: Hosting
 on:
   push:
     branches: main
-    # paths: 'flutter/**'
+    paths: 'flutter/**'
 
 jobs:
   build-web:
@@ -15,25 +15,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v2
+      
+      - name: Deploy executable
+        uses: cross-the-world/ssh-scp-ssh-pipelines@latest
         with:
-          channel: 'stable'
-
-      - name: Install dependencies
-        working-directory: ${{ env.workdir }}
-        run: flutter pub get
-
-      - name: Build Flutter web
-        working-directory: ${{ env.workdir }}
-        run: flutter build web
-
-      - name: Deploy to Github Pages
-        working-directory: ${{ env.workdir }}
-        run: |
-          cd build/web
-          git config --global user.email waldeck-dev
-          git config --global user.name prcup
-          git init
-          git add --all
-          git commit -m "Deploy"
-          git push -f https://waldeck-dev:${{ secrets.GH_TOKEN }}@github.com/waldeck-dev/prcup.git master:gh-pages
+          host: ${{ secrets.SSH_HOST }}
+          user: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          first_ssh: sh ${{ secrets.SCP_TARGET }}/hosting.sh
