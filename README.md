@@ -5,7 +5,7 @@
 The rules are very simple:
 
 - The team establishes a list of remarkable numbers
-- The developer who creates the PR with this number wins a point
+- The developer who creates the PR with this number scores one point
 
 The application compiles the results and ranks the developers according to their score.
 
@@ -29,42 +29,48 @@ The technical stack is made up as follows:
 | Env variable | Details |
 | --- | --- |
 | `FIREBASE_URL` | url to your Firebase Realtime Database (without `https://`) |
-| `FIREBASE_SA_CREDS` | must be a base64 representation of your Service Account credentials (a JSON file) |
+| `FIREBASE_SA_CREDS` | must be a `base64` representation of your Service Account credentials (a JSON file) |
 | `GH_REPO` | Github repository where the action takes place |
 | `GH_OWNER` | repository's owner (Github username) |
 | `GH_TOKEN` | token to authenticate requests while using Github API |
 
 ### Database
 
-*TODO ...*
+1. Create a new Firebase project and Realtime Database
+2. Create a new Service Account
+3. Download the Service Account credentials file (a JSON file)
+4. You will need to pass the credentials data in the `FIREBASE_SA_CREDS` environment variable, encoded in `base64`
 
 ### Worker
 
 1. Install dependencies
-```sh
-cd ./backend
-dart pub get
-```
+
+    ```sh
+    cd ./backend
+    dart pub get
+    ```
 
 2. Run dart script with env variables
-```sh
-dart run \
-    --define=GH_OWNER=<Change me> \
-    --define=GH_REPO=<Change me> \
-    --define=GH_TOKEN=<Change me> \
-    --define=FIREBASE_URL=<Change me> \
-    --define=FIREBASE_SA_CREDS=<Change me> \
-    ./lib/worker/worker.dart
-```
+
+    ```sh
+    dart run \
+        --define=GH_OWNER=<Change me> \
+        --define=GH_REPO=<Change me> \
+        --define=GH_TOKEN=<Change me> \
+        --define=FIREBASE_URL=<Change me> \
+        --define=FIREBASE_SA_CREDS=<Change me> \
+        ./lib/worker/worker.dart
+    ```
 
 ### API
 
 1. Compile API to executable
-```
-cd ./backend
-dart pub get
-dart compile exe ./backend/lib/api/main.dart -o /tmp/prcup-api
-```
+
+    ```sh
+    cd ./backend
+    dart pub get
+    dart compile exe ./backend/lib/api/main.dart -o /tmp/prcup-api
+    ```
 
 2. Make sure environment variables `FIREBASE_URL` and `FIREBASE_SA_CREDS` are set
 
@@ -72,7 +78,15 @@ dart compile exe ./backend/lib/api/main.dart -o /tmp/prcup-api
 
 ### Web app
 
-```sh
-cd ./flutter
-flutter run -d chrome
-```
+1. Build flutter web app
+
+    ```sh
+    cd ./flutter
+    flutter build web
+    ```
+
+2. Host the web app that's just been built
+
+    ```sh
+    ./build/web
+    ```
