@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:prcup/models/result.dart';
 
-import 'sevrices/save.dart';
+import 'services/save.dart';
 
 import 'widgets/commons.dart';
 import 'widgets/user_card.dart';
@@ -128,9 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final int maxScore =
         scores.values.toList(growable: false).reduce((currentMax, value) {
-      if (currentMax == null || value > currentMax) {
-        return value;
-      }
+      return (currentMax == null || value > currentMax) ? value : currentMax;
     });
 
     var currentMaxScore = maxScore;
@@ -156,6 +154,8 @@ class _MyHomePageState extends State<MyHomePage> {
       currentMaxScore--;
       currentPos += currentPosResults.length;
     }
+
+    print(rankedResults);
 
     setState(() {
       _rankedResults = rankedResults;
