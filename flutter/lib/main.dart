@@ -41,6 +41,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   late Map<String, dynamic> _save;
   List<List<Result>> _rankedResults = [[]];
+  int _nextRemarkableNumbers = 0;
 
   void _loadSave(Map<String, dynamic> newSave) {
     setState(() {
@@ -56,6 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
     saveMgr.fetch().then((response) {
       _loadSave(jsonDecode(response.body));
       getRankedResults(_save);
+      getNextRemarkableNumber(_save);
     });
   }
 
@@ -77,12 +79,23 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 48.0),
-                child: Text(
-                  '#PR Cup',
-                  style: GoogleFonts.racingSansOne(
-                      color: fontColor,
-                      fontSize: 64,
-                      shadows: [Shadow(color: shadowColor, blurRadius: 8)]),
+                child: Column(
+                  children: [
+                    Text(
+                      '#PR Cup',
+                      style: GoogleFonts.racingSansOne(
+                          color: fontColor,
+                          fontSize: 64,
+                          shadows: [Shadow(color: shadowColor, blurRadius: 8)]),
+                    ),
+                    Text(
+                      "Next target: #${_nextRemarkableNumbers.toString()}",
+                      style: GoogleFonts.spaceGrotesk(
+                          color: fontColor,
+                          fontSize: 16,
+                          shadows: [Shadow(color: shadowColor, blurRadius: 8)]),
+                    )
+                  ],
                 ),
               ),
               SizedBox(height: offsetH),
@@ -157,6 +170,24 @@ class _MyHomePageState extends State<MyHomePage> {
 
     setState(() {
       _rankedResults = rankedResults;
+    });
+  }
+
+  getNextRemarkableNumber(save) {
+    final allNumbers = save['remarkable_numbers']..sort();
+
+    final scoredNumbers = save['results'].map((r) => r['number']).toList()
+      ..sort();
+
+    final latestNumber = scoredNumbers.last;
+    final latestNumberIndex = allNumbers.indexOf(latestNumber);
+
+    final nextRemarkableNumbers = latestNumberIndex + 1 < allNumbers.length
+        ? allNumbers[latestNumberIndex + 1]
+        : -1;
+
+    setState(() {
+      _nextRemarkableNumbers = nextRemarkableNumbers;
     });
   }
 }
