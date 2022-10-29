@@ -155,8 +155,6 @@ class _MyHomePageState extends State<MyHomePage> {
       currentPos += currentPosResults.length;
     }
 
-    print(rankedResults);
-
     setState(() {
       _rankedResults = rankedResults;
     });
