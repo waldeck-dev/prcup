@@ -23,3 +23,9 @@ export const ItemTypeEnum = {
 } as const;
 
 export type ItemType = typeof ItemTypeEnum[keyof typeof ItemTypeEnum];
+
+export type Score = {
+  number: number;
+  type: ItemType;
+  user: User;
+};
