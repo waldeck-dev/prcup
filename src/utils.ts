@@ -1,3 +1,6 @@
+import type { Score } from "./types.ts";
+import scores from "../data/scores.json" with { type: "json" };
+
 export function parseRawNumbers(rawNumbers: string): number[] {
   const out: number[] = [];
 
@@ -9,4 +12,8 @@ export function parseRawNumbers(rawNumbers: string): number[] {
   }
 
   return out.sort((a: number, b: number) => a - b);
+}
+
+export function getScores(): Score[] {
+  return scores as Score[];
 }
