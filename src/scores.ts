@@ -4,7 +4,6 @@ export class ScoreManager {
   private scores: Score[];
 
   constructor(private filepath: string) {
-    this.filepath = filepath;
     this.scores = this.readScores();
   }
 
@@ -25,5 +24,14 @@ export class ScoreManager {
     const newScores = this.getScores();
     newScores.push(score);
     this.writeScores(newScores);
+  }
+
+  public scoreExistsForItem(number: number): boolean {
+    for (const score of this.scores) {
+      if (score.number === number) {
+        return true;
+      }
+    }
+    return false;
   }
 }
