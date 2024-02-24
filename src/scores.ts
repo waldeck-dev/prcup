@@ -12,18 +12,31 @@ export class ScoreManager {
     return JSON.parse(data);
   }
 
-  private writeScores(scores: Score[]): void {
-    Deno.writeTextFileSync(this.filepath, JSON.stringify(scores));
+  public writeScores(): void {
+    console.log("Writing scores", this.scores.length);
+    Deno.writeTextFileSync(this.filepath, JSON.stringify(this.scores));
   }
 
   public getScores(): Score[] {
     return this.scores;
   }
 
+  public getScoreByNumber(number: number): Score | undefined {
+    return this.getScores().find((s) => s.number === number);
+  }
+
   public addScore(score: Score): void {
-    const newScores = this.getScores();
-    newScores.push(score);
-    this.writeScores(newScores);
+    console.log("Adding score", score);
+    this.scores.push(score);
+  }
+
+  public updateScore(score: Score): void {
+    const oldScore = this.getScoreByNumber(score.number);
+    if (!oldScore) {
+      console.warn(`Item #${score.number} does not exists in Scores.`);
+      return;
+    }
+    Object.assign(oldScore, score);
   }
 
   public scoreExistsForItem(number: number): boolean {
