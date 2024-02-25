@@ -5,18 +5,11 @@ import { InvalidItemError, ItemNotFoundError } from "./errors.ts";
 export default class GithubApi {
   BASE_URL = new URL("https://api.github.com");
 
-  owner: string;
-  name: string;
-  key: string;
-
-  constructor(owner: string, name: string, key: string) {
-    this.owner = owner;
-    this.name = name;
-    this.key = key;
+  constructor(private repository: string, private key: string) {
   }
 
   getBaseUrl(): URL {
-    return new URL(`repos/${this.owner}/${this.name}/`, this.BASE_URL);
+    return new URL(`repos/${this.repository}/`, this.BASE_URL);
   }
 
   getEndpointUrl(path: string, query?: Record<string, string>): URL {

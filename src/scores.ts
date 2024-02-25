@@ -2,13 +2,27 @@ import type { Score } from "./types.ts";
 
 export class ScoreManager {
   private scores: Score[];
+  private filename: string;
+  private filepath: string;
 
-  constructor(private filepath: string) {
+  constructor(private dataDirectory: string, private repository: string) {
+    this.filename = `${
+      this.repository.replaceAll("/", "-").toLowerCase()
+    }.json`;
+    this.filepath = `${this.dataDirectory}/${this.filename}`;
     this.scores = this.readScores();
   }
 
   private readScores(): Score[] {
-    const data = Deno.readTextFileSync(this.filepath);
+    let data: string;
+
+    try {
+      data = Deno.readTextFileSync(this.filepath);
+    } catch (_err) {
+      data = "[]";
+      Deno.writeTextFileSync(this.filepath, JSON.stringify(data));
+    }
+
     return JSON.parse(data);
   }
 
