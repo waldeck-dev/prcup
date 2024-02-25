@@ -9,8 +9,8 @@ export type Score = {
   number: number;
   type: ItemType;
   user: User;
-  state: Pull["merged"] | Issue["state_reason"];
   score: number;
+  processed: boolean;
 };
 
 export type User = {
@@ -22,6 +22,7 @@ export type User = {
 export type Pull = {
   type: typeof ItemTypeEnum.PULL;
   number: number;
+  state: "open" | "closed";
   merged: boolean;
   user: User;
 };
