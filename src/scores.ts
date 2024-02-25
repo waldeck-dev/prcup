@@ -13,8 +13,7 @@ export class ScoreManager {
   }
 
   public writeScores(): void {
-    console.log("Writing scores", this.scores.length);
-    Deno.writeTextFileSync(this.filepath, JSON.stringify(this.scores));
+    Deno.writeTextFileSync(this.filepath, JSON.stringify(this.scores, null, 2));
   }
 
   public getScores(): Score[] {
