@@ -1,5 +1,6 @@
 import type { Issue, ItemType, Pull } from "./types.ts";
 import { ItemTypeEnum } from "./types.ts";
+import { InvalidItemError, ItemNotFoundError } from "./errors.ts";
 
 export default class GithubApi {
   BASE_URL = new URL("https://api.github.com");
@@ -34,6 +35,9 @@ export default class GithubApi {
   async parseResponse<T>(response: Response): Promise<T> {
     if (response.status === 200) {
       return await response.json();
+    }
+    if (response.status === 404) {
+      throw new InvalidItemError();
     }
 
     throw await new Error("Invalid response");
@@ -82,7 +86,29 @@ export default class GithubApi {
       headers: this.getHeaders(),
     });
 
-    return this.parseResponse<T>(res);
+    return await this.parseResponse<T>(res);
+  }
+
+  async getItemByNumber(number: number): Promise<Pull | Issue> {
+    for (const func of [this.getPull, this.getIssue]) {
+      try {
+        const item = await func.bind(this)(number);
+
+        item.type = func === this.getPull
+          ? ItemTypeEnum.PULL
+          : ItemTypeEnum.ISSUE;
+
+        return item;
+      } catch (error) {
+        if (error instanceof InvalidItemError) {
+          continue;
+        }
+
+        throw error;
+      }
+    }
+
+    throw new ItemNotFoundError(number);
   }
 
   async getPull(number: number): Promise<Pull> {
