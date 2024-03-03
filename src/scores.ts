@@ -39,7 +39,6 @@ export class ScoreManager {
   }
 
   public addScore(score: Score): void {
-    console.log("Adding score", score);
     this.scores.push(score);
   }
 
