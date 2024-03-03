@@ -4,6 +4,7 @@ import { ItemTypeEnum } from "./types.ts";
 import { Score, User } from "./types.ts";
 import { Pull } from "./types.ts";
 import { Issue } from "./types.ts";
+import { PageGenerator } from "../ui/generator.ts";
 
 const PULL_OK = parseInt(Deno.env.get("PULL_OK") || "3");
 const PULL_NOK = parseInt(Deno.env.get("PULL_NOK") || "-3");
@@ -12,6 +13,7 @@ const ISSUE_NOK = parseInt(Deno.env.get("ISSUE_NOK") || "-1");
 
 export class PrCupWorker {
   constructor(
+    private repository: string,
     private numbers: number[],
     private scoreManager: ScoreManager,
     private GithubApi: GithubApi,
@@ -109,5 +111,9 @@ export class PrCupWorker {
 
     // Save to file
     this.scoreManager.writeScores();
+
+    // Generate static pages
+    const gen = new PageGenerator(this.repository);
+    gen.generatePage("scores.njk", { scores: this.scoreManager.getScores() });
   }
 }

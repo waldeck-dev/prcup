@@ -17,10 +17,13 @@ const NUMBERS = Deno.env.get("NUMBERS") || "";
 const numbers = parseRawNumbers(NUMBERS);
 
 for (const repository of REPOSITORIES.split(",")) {
+  // Remove slashes from repository name
+  const sanitizedRepo = repository.replaceAll(/[\/\\]/g, "-");
+
   try {
-    const scoreMgr = new ScoreManager(`${BASE_DIR}/data`, repository);
+    const scoreMgr = new ScoreManager(`${BASE_DIR}/data`, sanitizedRepo);
     const ghApi = new GithubApi(repository, GH_TOKEN);
-    const worker = new PrCupWorker(numbers, scoreMgr, ghApi);
+    const worker = new PrCupWorker(sanitizedRepo, numbers, scoreMgr, ghApi);
     await worker.run();
   } catch (error) {
     console.error(
