@@ -13,6 +13,13 @@ export type Score = {
   processed: boolean;
 };
 
+export type aUserScores = {
+  // Score data ready to be processed by PageGenerator
+  [position: number]: { user: User; scores: Score[] }[];
+};
+
+export type UserScores = Map<number, { user: User; scores: Score[] }[]>;
+
 export type User = {
   avatar_url: string;
   html_url: string;

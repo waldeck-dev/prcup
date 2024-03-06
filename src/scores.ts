@@ -1,4 +1,4 @@
-import type { Score } from "./types.ts";
+import type { Score, User, UserScores } from "./types.ts";
 
 export class ScoreManager {
   private scores: Score[];
@@ -36,6 +36,52 @@ export class ScoreManager {
 
   public getScoreByNumber(number: number): Score | undefined {
     return this.getScores().find((s) => s.number === number);
+  }
+
+  public getUserScores(): UserScores {
+    const scores = this.getScores();
+
+    // Skip fast if no scores to process
+    if (scores.length === 0) {
+      return new Map();
+    }
+
+    const sumByUser = new Map<string, number>();
+    const userDetails = new Map<string, User>();
+
+    // Calculate sums by User
+    for (const score of scores) {
+      const login = score.user.login;
+      if (sumByUser.has(login)) {
+        sumByUser.set(login, (sumByUser.get(login) || 0) + score.score);
+      } else {
+        sumByUser.set(login, score.score);
+        userDetails.set(login, score.user);
+      }
+    }
+
+    // Rank scores
+    const rankedScores = Array.from(sumByUser.entries()).sort((
+      [, score1],
+      [, score2],
+    ) => score2 - score1);
+
+    // Positions
+    const positions: UserScores = new Map();
+    rankedScores.forEach(([login], index) => {
+      const pos = index + 1;
+      const userScore = {
+        user: userDetails.get(login) as User,
+        scores: scores.filter((score) => score.user.login === login),
+      };
+      if (positions.has(pos)) {
+        positions.get(pos)?.push(userScore);
+      } else {
+        positions.set(pos, [userScore]);
+      }
+    });
+
+    return positions;
   }
 
   public addScore(score: Score): void {
