@@ -31,6 +31,7 @@ export type Pull = {
   number: number;
   state: "open" | "closed";
   merged: boolean;
+  assignee: User;
   user: User;
 };
 

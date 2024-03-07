@@ -76,9 +76,7 @@ export class PrCupWorker {
     return {
       number: item.number,
       type: item.type,
-      user: this.formatUserData(
-        item.type === ItemTypeEnum.ISSUE ? item.assignee : item.user,
-      ),
+      user: this.formatUserData(item.assignee || item.user),
       score: this.calculateScore(item, processed),
       processed,
     };
