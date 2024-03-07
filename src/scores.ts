@@ -68,18 +68,30 @@ export class ScoreManager {
 
     // Positions
     const positions: UserScores = new Map();
-    rankedScores.forEach(([login], index) => {
-      const pos = index + 1;
+    let currentPos = 1;
+    let currentScore = NaN;
+
+    for (const [login, score] of rankedScores) {
+      if (Number.isNaN(currentScore)) {
+        currentScore = score;
+      }
+
+      if (currentScore > score) {
+        currentPos = currentPos + 1;
+        currentScore = score;
+      }
+
       const userScore = {
         user: userDetails.get(login) as User,
-        scores: scores.filter((score) => score.user.login === login),
+        scores: scores.filter((s) => s.user.login === login),
       };
-      if (positions.has(pos)) {
-        positions.get(pos)?.push(userScore);
+
+      if (positions.has(currentPos)) {
+        positions.get(currentPos)?.push(userScore);
       } else {
-        positions.set(pos, [userScore]);
+        positions.set(currentPos, [userScore]);
       }
-    });
+    }
 
     return positions;
   }
