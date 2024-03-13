@@ -19,6 +19,7 @@
 
     html {
       background: linear-gradient(90deg, #ffb88e 0%, #ea5753 100%);
+      padding: 2rem 0 3rem 0;
     }
 
     h1 {
@@ -67,21 +68,22 @@
     }
 
     .usercard .in-progress {
-      animation: blink-animation 1.5s infinite;
+      color: darkgray;
+      animation: blink-animation 2s infinite;
     }
 
     @keyframes blink-animation {
-      0% {
+      15% {
         color: darkgray;
         text-shadow: 0;
       }
 
       50% {
         color: white;
-        text-shadow: 0 0 .5rem white;
+        text-shadow: 0 0 .5rem rgba(255, 255, 255, .75);
       }
 
-      100% {
+      85% {
         color: darkgray;
         text-shadow: 0;
       }
