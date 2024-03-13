@@ -1,0 +1,19 @@
+{% macro gencards(position, data) %}
+{% for score in data %}
+<div class="column is-3-desktop is-4-tablet is-4-mobile">
+    <div class="columns usercard">
+        <div class="column has-text-centered">
+            <img src="{{ score.user.avatar_url }}" class="avatar" alt="{{ score.user.login }}" />
+            <a href="{{ score.user.html_url }}" target="_blank">
+                <h2>{{ score.user.login }}</h2>
+            </a>
+            {% if score.emoji %}<p class="is-size-4">{{ score.emoji }}</p>{% endif %}
+            <p class="is-size-5 has-text-weight-bold">{{ score.totalScore }} pts</p>
+            <p>{% for s in score.scores %}
+            <span class="is-{{ s.type }}{% if s.score == 0 %} in-progress{% elif s.score < 0 %} is-negative{% endif %}">#{{ s.number}}</span>
+            {% endfor %}</p>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endmacro %}

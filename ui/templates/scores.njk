@@ -1,0 +1,12 @@
+{% import("ui/templates/usercard.njk") as usercard %}
+{% extends "ui/templates/main.html" %}
+{% block content %}
+<div class="container">
+  <h1 class="is-size-1 has-text-centered">#PRCup</h1>
+  {% for position, data in rankedScores %}
+  <div class="columns is-justify-content-center">
+  {{ usercard.gencards(position, data) }}
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
