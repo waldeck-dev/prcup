@@ -65,6 +65,27 @@
     .usercard .is-negative {
       color: #e5534b;
     }
+
+    .usercard .in-progress {
+      animation: blink-animation 1.5s infinite;
+    }
+
+    @keyframes blink-animation {
+      0% {
+        color: darkgray;
+        text-shadow: 0;
+      }
+
+      50% {
+        color: white;
+        text-shadow: 0 0 .5rem white;
+      }
+
+      100% {
+        color: darkgray;
+        text-shadow: 0;
+      }
+    }
   </style>
 </head>
 
