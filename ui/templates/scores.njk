@@ -3,6 +3,7 @@
 {% block content %}
 <div class="container">
   <h1 class="is-size-1 has-text-centered">#PRCup</h1>
+  {% if nextTarget %}<h2 class="is-size-4 has-text-centered">NEXT : <strong>#{{ nextTarget }}</strong></h2>{% endif %}
   {% for position, data in rankedScores %}
   <div class="columns is-justify-content-center">
   {{ usercard.gencards(position, data) }}

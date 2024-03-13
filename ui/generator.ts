@@ -7,6 +7,8 @@ const OUTPUT_DIR = path.join(BASE_DIR, "out");
 
 type TEMPLATES = "scores.njk";
 
+type GeneratorData = { nextTarget: number | null; rankedScores: UserScores };
+
 export class PageGenerator {
   constructor(
     private repository: string,
@@ -21,11 +23,11 @@ export class PageGenerator {
 
   public generatePage(
     template: TEMPLATES,
-    data: { rankedScores: UserScores },
+    data: GeneratorData,
   ) {
     const renderedTemplate = nunjucks.render(
       path.join(this.templateDir, template),
-      { rankedScores: this.prepareScoreData(data.rankedScores) },
+      { ...data, rankedScores: this.prepareScoreData(data.rankedScores) },
     );
     this.writePage(
       path.join(this.outDir, `${this.repository}.html`),

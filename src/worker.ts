@@ -20,15 +20,29 @@ export class PrCupWorker {
   ) {
   }
 
-  private async getUnprocessedItems(): Promise<number[]> {
+  private async getUnprocessedItems(): Promise<
+    { unprocessedItems: number[]; latestItem: number }
+  > {
     const latestItem = Math.max(
       await this.GithubApi.getLatestPull(),
       await this.GithubApi.getLatestIssue(),
     );
 
-    return [...this.numbers].filter((n) =>
+    return {
+      unprocessedItems: [...this.numbers].filter((n) =>
       n <= latestItem && !this.scoreManager.scoreExistsForItem(n)
-    );
+      ),
+      latestItem,
+    };
+  }
+
+  private getNextTarget(latestItem: number): number | null {
+    for (const n of this.numbers) {
+      if (n > latestItem) {
+        return n;
+      }
+    }
+    return null;
   }
 
   private formatUserData(user: User): User {
@@ -84,7 +98,7 @@ export class PrCupWorker {
 
   public async run(): Promise<void> {
     // Process all new Pull Requests / Issues
-    const unprocessedItems = await this.getUnprocessedItems();
+    let { unprocessedItems, latestItem } = await this.getUnprocessedItems();
 
     for (const item of unprocessedItems) {
       console.info(`Getting score for item #${item}`);
@@ -92,6 +106,9 @@ export class PrCupWorker {
       this.scoreManager.addScore(
         this.newScore(data, this.shouldBeProcessed(data)),
       );
+      if (item > latestItem) {
+        latestItem = item;
+      }
     }
 
     // Update previously processed Pull Requests / Issues if not in final state
@@ -112,6 +129,9 @@ export class PrCupWorker {
 
     // Generate static pages
     const gen = new PageGenerator(this.repository);
-    gen.generatePage("scores.njk", { scores: this.scoreManager.getScores() });
+    gen.generatePage("scores.njk", {
+      rankedScores: this.scoreManager.getUserScores(),
+      nextTarget: this.getNextTarget(latestItem),
+    });
   }
 }
