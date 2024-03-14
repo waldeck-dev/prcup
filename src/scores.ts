@@ -70,6 +70,7 @@ export class ScoreManager {
     const positions: UserScores = new Map();
     let currentPos = 1;
     let currentScore = NaN;
+    let counter = 1;
 
     for (const [login, score] of rankedScores) {
       if (Number.isNaN(currentScore)) {
@@ -77,7 +78,7 @@ export class ScoreManager {
       }
 
       if (currentScore > score) {
-        currentPos = currentPos + 1;
+        currentPos++;
         currentScore = score;
       }
 
@@ -89,8 +90,10 @@ export class ScoreManager {
       if (positions.has(currentPos)) {
         positions.get(currentPos)?.push(userScore);
       } else {
-        positions.set(currentPos, [userScore]);
+        positions.set(counter, [userScore]);
       }
+
+      counter++;
     }
 
     return positions;
