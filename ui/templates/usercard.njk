@@ -1,7 +1,7 @@
 {% macro gencards(position, data) %}
 {% for score in data %}
-<div class="column is-3-desktop is-4-tablet is-4-mobile">
-    <div class="columns usercard">
+<div class="column is-4-desktop is-6-tablet is-12-mobile">
+    <div class="columns usercard mx-2">
         <div class="column has-text-centered">
             <img src="{{ score.user.avatar_url }}" class="avatar" alt="{{ score.user.login }}" />
             <a href="{{ score.user.html_url }}" target="_blank">
