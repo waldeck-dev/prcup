@@ -70,14 +70,17 @@ export class ScoreManager {
     const positions: UserScores = new Map();
     let currentPos = 1;
     let currentScore = NaN;
+    let counter = 0;
 
     for (const [login, score] of rankedScores) {
+      counter++;
+
       if (Number.isNaN(currentScore)) {
         currentScore = score;
       }
 
       if (currentScore > score) {
-        currentPos++;
+        currentPos = counter;
         currentScore = score;
       }
 
