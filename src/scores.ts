@@ -70,7 +70,6 @@ export class ScoreManager {
     const positions: UserScores = new Map();
     let currentPos = 1;
     let currentScore = NaN;
-    let counter = 1;
 
     for (const [login, score] of rankedScores) {
       if (Number.isNaN(currentScore)) {
@@ -82,18 +81,20 @@ export class ScoreManager {
         currentScore = score;
       }
 
-      const userScore = {
-        user: userDetails.get(login) as User,
+      const userScoreData = {
+        user: {
+          login,
+          avatar_url: userDetails.get(login)?.avatar_url || "",
+          html_url: userDetails.get(login)?.html_url || "",
+        },
         scores: scores.filter((s) => s.user.login === login),
       };
 
       if (positions.has(currentPos)) {
-        positions.get(currentPos)?.push(userScore);
+        positions.get(currentPos)?.push(userScoreData);
       } else {
-        positions.set(counter, [userScore]);
+        positions.set(currentPos, [userScoreData]);
       }
-
-      counter++;
     }
 
     return positions;
