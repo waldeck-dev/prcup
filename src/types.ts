@@ -24,6 +24,7 @@ export type User = {
   avatar_url: string;
   html_url: string;
   login: string;
+  status?: Status;
 };
 
 export type Pull = {
@@ -43,3 +44,5 @@ export type Issue = {
   assignee: User;
   user: User;
 };
+
+export type Status = "active" | "inactive";

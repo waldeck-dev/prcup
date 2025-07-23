@@ -1,5 +1,5 @@
 import { nunjucks, path } from "../dep.ts";
-import { UserScores } from "../src/types.ts";
+import { Status, UserScores } from "../src/types.ts";
 
 const BASE_DIR = path.join(Deno.cwd(), "ui");
 const TEMPLATE_DIR = path.join(BASE_DIR, "templates");
@@ -7,7 +7,10 @@ const OUTPUT_DIR = path.join(BASE_DIR, "out");
 
 type TEMPLATES = "scores.njk";
 
-type GeneratorData = { nextTarget: number | null; rankedScores: UserScores };
+type GeneratorData = {
+  nextTarget: number | null;
+  rankedScores: Record<Status, UserScores>;
+};
 
 export class PageGenerator {
   constructor(
@@ -27,7 +30,11 @@ export class PageGenerator {
   ) {
     const renderedTemplate = nunjucks.render(
       path.join(this.templateDir, template),
-      { ...data, rankedScores: this.prepareScoreData(data.rankedScores) },
+      {
+        nextTarget: data.nextTarget,
+        rankedScoresActive: this.prepareScoreData(data.rankedScores.active),
+        rankedScoresInactive: this.prepareScoreData(data.rankedScores.inactive),
+      },
     );
     this.writePage(
       path.join(this.outDir, `${this.repository}.html`),
@@ -47,7 +54,7 @@ export class PageGenerator {
       for (const item of items) {
         newItems.push({
           user: item.user,
-          emoji: this.getEmoji(position),
+          emoji: item.user.status === "active" ? this.getEmoji(position) : null,
           totalScore: item.scores.reduce((sum, score) => sum + score.score, 0),
           scores: item.scores,
         });

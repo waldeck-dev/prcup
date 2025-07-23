@@ -1,0 +1,8 @@
+{% import("ui/templates/usercard.njk") as usercard %}
+{% macro genranking(rankedData) %}
+{% for position, data in rankedData %}
+<div class="columns is-justify-content-center">
+{{ usercard.gencards(position, data) }}
+</div>
+{% endfor %}
+{% endmacro %}

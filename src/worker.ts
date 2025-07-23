@@ -30,7 +30,7 @@ export class PrCupWorker {
 
     return {
       unprocessedItems: [...this.numbers].filter((n) =>
-      n <= latestItem && !this.scoreManager.scoreExistsForItem(n)
+        n <= latestItem && !this.scoreManager.scoreExistsForItem(n)
       ),
       latestItem,
     };
@@ -54,7 +54,7 @@ export class PrCupWorker {
   }
 
   private shouldBeProcessed(data: Pull | Issue): boolean {
-      return data.state === "closed";
+    return data.state === "closed";
   }
 
   private calculateScore(item: Pull | Issue, processed: boolean): number {
@@ -124,7 +124,10 @@ export class PrCupWorker {
     // Generate static pages
     const gen = new PageGenerator(this.repository);
     gen.generatePage("scores.njk", {
-      rankedScores: this.scoreManager.getUserScores(),
+      rankedScores: {
+        active: this.scoreManager.getUserScores("active"),
+        inactive: this.scoreManager.getUserScores("inactive"),
+      },
       nextTarget: this.getNextTarget(latestItem),
     });
   }
