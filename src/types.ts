@@ -38,7 +38,8 @@ export type Pull = {
 export type Issue = {
   type: typeof ItemTypeEnum.ISSUE;
   number: number;
-  state_reason: "not_planned" | "completed" | null;
+  state: "open" | "closed";
+  state_reason: "completed" | "duplicate" | "not_planned" | "reopened" | null;
   assignee: User;
   user: User;
 };

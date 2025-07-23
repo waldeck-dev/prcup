@@ -54,13 +54,7 @@ export class PrCupWorker {
   }
 
   private shouldBeProcessed(data: Pull | Issue): boolean {
-    if (data.type === ItemTypeEnum.PULL) {
       return data.state === "closed";
-    }
-    if (data.type === ItemTypeEnum.ISSUE) {
-      return data.state_reason === "completed";
-    }
-    return true;
   }
 
   private calculateScore(item: Pull | Issue, processed: boolean): number {

@@ -10,7 +10,7 @@
             {% if score.emoji %}<p class="is-size-4">{{ score.emoji }}</p>{% endif %}
             <p class="is-size-5 has-text-weight-bold">{{ score.totalScore }} pts</p>
             <p>{% for s in score.scores %}
-            <span class="is-{{ s.type }}{% if s.score == 0 %} in-progress{% elif s.score < 0 %} is-negative{% endif %}">#{{ s.number}}</span>
+            <span class="is-{{ s.type }}{% if s.score == 0 %}{% if s.processed %} is-closed{% else %} in-progress{% endif %}{% elif s.score < 0 %} is-negative{% endif %}">#{{ s.number}}</span>
             {% endfor %}</p>
         </div>
     </div>
