@@ -1,0 +1,1993 @@
+[
+  {
+    "number": 1,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/46051601?v=4",
+      "html_url": "https://github.com/vozoul",
+      "login": "vozoul"
+    },
+    "score": -3,
+    "processed": true
+  },
+  {
+    "number": 6,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 12,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/46051601?v=4",
+      "html_url": "https://github.com/vozoul",
+      "login": "vozoul"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 24,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/46051601?v=4",
+      "html_url": "https://github.com/vozoul",
+      "login": "vozoul"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 28,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/46051601?v=4",
+      "html_url": "https://github.com/vozoul",
+      "login": "vozoul"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 42,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/92161013?v=4",
+      "html_url": "https://github.com/zaynbsn",
+      "login": "zaynbsn"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 48,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/46051601?v=4",
+      "html_url": "https://github.com/vozoul",
+      "login": "vozoul"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 69,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/46051601?v=4",
+      "html_url": "https://github.com/vozoul",
+      "login": "vozoul"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 74,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/46051601?v=4",
+      "html_url": "https://github.com/vozoul",
+      "login": "vozoul"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 100,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/46051601?v=4",
+      "html_url": "https://github.com/vozoul",
+      "login": "vozoul"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 111,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 123,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/89909556?v=4",
+      "html_url": "https://github.com/JonathanDatalumni",
+      "login": "JonathanDatalumni"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 200,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/46051601?v=4",
+      "html_url": "https://github.com/vozoul",
+      "login": "vozoul"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 222,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 234,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 255,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94922555?v=4",
+      "html_url": "https://github.com/khalilbensaid96",
+      "login": "khalilbensaid96"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 300,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/89909556?v=4",
+      "html_url": "https://github.com/JonathanDatalumni",
+      "login": "JonathanDatalumni"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 314,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 333,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 345,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/92161013?v=4",
+      "html_url": "https://github.com/zaynbsn",
+      "login": "zaynbsn"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 365,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/89909556?v=4",
+      "html_url": "https://github.com/JonathanDatalumni",
+      "login": "JonathanDatalumni"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 400,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 404,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": -3,
+    "processed": true
+  },
+  {
+    "number": 418,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 444,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 456,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/89909556?v=4",
+      "html_url": "https://github.com/JonathanDatalumni",
+      "login": "JonathanDatalumni"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 493,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/46051601?v=4",
+      "html_url": "https://github.com/vozoul",
+      "login": "vozoul"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 496,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 500,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 512,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 555,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 567,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/46051601?v=4",
+      "html_url": "https://github.com/vozoul",
+      "login": "vozoul"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 585,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 600,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/89909556?v=4",
+      "html_url": "https://github.com/JonathanDatalumni",
+      "login": "JonathanDatalumni"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 666,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 678,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 689,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/89909556?v=4",
+      "html_url": "https://github.com/JonathanDatalumni",
+      "login": "JonathanDatalumni"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 700,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 714,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 747,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 777,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/89909556?v=4",
+      "html_url": "https://github.com/JonathanDatalumni",
+      "login": "JonathanDatalumni"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 789,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/89909556?v=4",
+      "html_url": "https://github.com/JonathanDatalumni",
+      "login": "JonathanDatalumni"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 800,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 802,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 816,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/46051601?v=4",
+      "html_url": "https://github.com/vozoul",
+      "login": "vozoul"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 888,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 890,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 900,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/161706995?v=4",
+      "html_url": "https://github.com/Zenolila",
+      "login": "Zenolila"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 901,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 911,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/46051601?v=4",
+      "html_url": "https://github.com/vozoul",
+      "login": "vozoul"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 987,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 999,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/46051601?v=4",
+      "html_url": "https://github.com/vozoul",
+      "login": "vozoul"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1000,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/46051601?v=4",
+      "html_url": "https://github.com/vozoul",
+      "login": "vozoul"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1001,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1011,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/89909556?v=4",
+      "html_url": "https://github.com/JonathanDatalumni",
+      "login": "JonathanDatalumni"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1024,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1080,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/89909556?v=4",
+      "html_url": "https://github.com/JonathanDatalumni",
+      "login": "JonathanDatalumni"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1100,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1111,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1112,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1200,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/92161013?v=4",
+      "html_url": "https://github.com/zaynbsn",
+      "login": "zaynbsn"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1213,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1221,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/161706995?v=4",
+      "html_url": "https://github.com/Zenolila",
+      "login": "Zenolila"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1222,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1234,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1300,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1314,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1331,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1333,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1337,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1345,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": -3,
+    "processed": true
+  },
+  {
+    "number": 1357,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1400,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1415,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1418,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1441,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1444,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1456,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/161706995?v=4",
+      "html_url": "https://github.com/Zenolila",
+      "login": "Zenolila"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1492,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://private-avatars.githubusercontent.com/u/145402680?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MzQ2MDY5NjAsIm5iZiI6MTczNDYwNTc2MCwicGF0aCI6Ii91LzE0NTQwMjY4MCJ9.VbAlaArw6cjaWlP44adzQ0c48t6zKfPMC3HvSBVaKpI&v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1500,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1515,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1516,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1551,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1555,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1567,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1598,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1600,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1617,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1632,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1661,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1666,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/161706995?v=4",
+      "html_url": "https://github.com/Zenolila",
+      "login": "Zenolila"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1678,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1700,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1718,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1771,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1777,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1789,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/161706995?v=4",
+      "html_url": "https://github.com/Zenolila",
+      "login": "Zenolila"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1800,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1815,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1860,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/161706995?v=4",
+      "html_url": "https://github.com/Zenolila",
+      "login": "Zenolila"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1862,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1876,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1884,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/161706995?v=4",
+      "html_url": "https://github.com/Zenolila",
+      "login": "Zenolila"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1888,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1890,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1900,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1910,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/161706995?v=4",
+      "html_url": "https://github.com/Zenolila",
+      "login": "Zenolila"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1984,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1987,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/161706995?v=4",
+      "html_url": "https://github.com/Zenolila",
+      "login": "Zenolila"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 1990,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1991,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/161706995?v=4",
+      "html_url": "https://github.com/Zenolila",
+      "login": "Zenolila"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1995,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 1999,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2000,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2002,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2003,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2005,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2012,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2020,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2021,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2038,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2048,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2080,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2100,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2109,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2111,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2112,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2121,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2122,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2123,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2129,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2200,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2211,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2222,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2233,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2234,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2238,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2244,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2277,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2300,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2323,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2324,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2332,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 0,
+    "processed": true
+  },
+  {
+    "number": 2333,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2334,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2345,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2355,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2400,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2406,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/48678025?v=4",
+      "html_url": "https://github.com/UTkraken",
+      "login": "UTkraken"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2424,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2442,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2444,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2456,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 0,
+    "processed": false
+  },
+  {
+    "number": 2459,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/48678025?v=4",
+      "html_url": "https://github.com/UTkraken",
+      "login": "UTkraken"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2463,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2500,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 0,
+    "processed": false
+  },
+  {
+    "number": 2525,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2552,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2555,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2567,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2570,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2574,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/48678025?v=4",
+      "html_url": "https://github.com/UTkraken",
+      "login": "UTkraken"
+    },
+    "score": 0,
+    "processed": false
+  },
+  {
+    "number": 2592,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/48678025?v=4",
+      "html_url": "https://github.com/UTkraken",
+      "login": "UTkraken"
+    },
+    "score": 0,
+    "processed": false
+  },
+  {
+    "number": 2600,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2613,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/48678025?v=4",
+      "html_url": "https://github.com/UTkraken",
+      "login": "UTkraken"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2624,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2626,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2662,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2666,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2678,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2687,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2700,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2705,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2707,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/48678025?v=4",
+      "html_url": "https://github.com/UTkraken",
+      "login": "UTkraken"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2727,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 1,
+    "processed": true
+  },
+  {
+    "number": 2731,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2772,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/94049052?v=4",
+      "html_url": "https://github.com/theohugo",
+      "login": "theohugo"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2777,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/145402680?v=4",
+      "html_url": "https://github.com/baptiste-jullion",
+      "login": "baptiste-jullion"
+    },
+    "score": 0,
+    "processed": false
+  },
+  {
+    "number": 2789,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/49414886?v=4",
+      "html_url": "https://github.com/waldeck-dev",
+      "login": "waldeck-dev"
+    },
+    "score": 3,
+    "processed": true
+  },
+  {
+    "number": 2800,
+    "type": "issue",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/48678025?v=4",
+      "html_url": "https://github.com/UTkraken",
+      "login": "UTkraken"
+    },
+    "score": 0,
+    "processed": false
+  },
+  {
+    "number": 2828,
+    "type": "pull",
+    "user": {
+      "avatar_url": "https://avatars.githubusercontent.com/u/90966527?v=4",
+      "html_url": "https://github.com/YohPaN",
+      "login": "YohPaN"
+    },
+    "score": 0,
+    "processed": false
+  }
+]
