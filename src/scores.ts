@@ -1,36 +1,132 @@
 import type { Score, Status, User, UserScores } from "./types.ts";
+import { path, sqlite } from "../dep.ts";
+
+type ScoreRow = {
+  repository: string;
+  number: number;
+  type: string;
+  user_login: string;
+  user_avatar_url: string;
+  user_html_url: string;
+  score: number;
+  processed: number;
+  closed_at: string | null;
+};
+
+type ScoreTableInfoRow = {
+  name: string;
+};
 
 export class ScoreManager {
   private scores: Score[];
-  private filename: string;
-  private filepath: string;
+  private db: sqlite.DB;
 
   private cachedUserStatus?: Map<string, Status>;
 
-  constructor(private dataDirectory: string, private repository: string) {
-    this.filename = `${
-      this.repository.replaceAll("/", "-").toLowerCase()
-    }.json`;
-    this.filepath = `${this.dataDirectory}/${this.filename}`;
+  constructor(private dbPath: string, private repository: string) {
+    this.ensureDatabasePath();
+    this.db = new sqlite.DB(this.dbPath);
+    this.initializeSchema();
     this.scores = this.readScores();
     this.cachedUserStatus = this.cacheUsersByStatus();
   }
 
-  private readScores(): Score[] {
-    let data: string;
+  private ensureDatabasePath(): void {
+    const dir = path.dirname(this.dbPath);
+    Deno.mkdirSync(dir, { recursive: true });
+  }
 
-    try {
-      data = Deno.readTextFileSync(this.filepath);
-    } catch (_err) {
-      data = "[]";
-      Deno.writeTextFileSync(this.filepath, JSON.stringify(data));
+  private initializeSchema(): void {
+    this.db.execute(`
+      CREATE TABLE IF NOT EXISTS scores (
+        repository TEXT NOT NULL,
+        number INTEGER NOT NULL,
+        type TEXT NOT NULL,
+        user_login TEXT NOT NULL,
+        user_avatar_url TEXT NOT NULL,
+        user_html_url TEXT NOT NULL,
+        score INTEGER NOT NULL,
+        processed INTEGER NOT NULL,
+        closed_at TEXT,
+        PRIMARY KEY (repository, number)
+      )
+    `);
+
+    this.migrateSchema();
+  }
+
+  private migrateSchema(): void {
+    const tableInfo = this.db.queryEntries<ScoreTableInfoRow>(
+      "PRAGMA table_info(scores)",
+    );
+
+    if (!tableInfo.some((column) => column.name === "closed_at")) {
+      this.db.execute("ALTER TABLE scores ADD COLUMN closed_at TEXT");
     }
+  }
 
-    return JSON.parse(data);
+  private readScores(): Score[] {
+    const rows = this.db.queryEntries<ScoreRow>(
+      `
+        SELECT repository, number, type, user_login, user_avatar_url, user_html_url, score, processed, closed_at
+        FROM scores
+        WHERE repository = ?
+      `,
+      [this.repository],
+    );
+
+    return rows.map((row) => ({
+      number: row.number,
+      type: row.type as Score["type"],
+      user: {
+        login: row.user_login,
+        avatar_url: row.user_avatar_url,
+        html_url: row.user_html_url,
+      },
+      score: row.score,
+      processed: row.processed === 1,
+      closed_at: row.closed_at,
+    }));
   }
 
   public writeScores(): void {
-    Deno.writeTextFileSync(this.filepath, JSON.stringify(this.scores, null, 2));
+    for (const score of this.scores) {
+      this.db.query(
+        `
+          INSERT INTO scores (
+            repository,
+            number,
+            type,
+            user_login,
+            user_avatar_url,
+            user_html_url,
+            score,
+            processed,
+            closed_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+          ON CONFLICT(repository, number)
+          DO UPDATE SET
+            type = excluded.type,
+            user_login = excluded.user_login,
+            user_avatar_url = excluded.user_avatar_url,
+            user_html_url = excluded.user_html_url,
+            score = excluded.score,
+            processed = excluded.processed,
+            closed_at = excluded.closed_at
+        `,
+        [
+          this.repository,
+          score.number,
+          score.type,
+          score.user.login,
+          score.user.avatar_url,
+          score.user.html_url,
+          score.score,
+          score.processed ? 1 : 0,
+          score.closed_at,
+        ],
+      );
+    }
   }
 
   public getScores(): Score[] {
@@ -41,10 +137,21 @@ export class ScoreManager {
     return this.getScores().find((s) => s.number === number);
   }
 
-  public getUserScores(status: Status): UserScores {
-    const scores = this.getScores();
+  private getYearFromClosedAt(closedAt: string | null): number | null {
+    if (!closedAt) {
+      return null;
+    }
 
-    // Skip fast if no scores to process
+    const parsed = new Date(closedAt);
+
+    if (Number.isNaN(parsed.getTime())) {
+      return null;
+    }
+
+    return parsed.getUTCFullYear();
+  }
+
+  private buildUserScores(status: Status, scores: Score[]): UserScores {
     if (scores.length === 0) {
       return new Map();
     }
@@ -52,12 +159,11 @@ export class ScoreManager {
     const sumByUser = new Map<string, number>();
     const userDetails = new Map<string, User>();
 
-    // Calculate sums by User
     for (const score of scores) {
       const login = score.user.login;
 
       if (this.getUserStatus(login) !== status) {
-        continue; // Skip users not matching the status
+        continue;
       }
 
       if (sumByUser.has(login)) {
@@ -68,13 +174,11 @@ export class ScoreManager {
       }
     }
 
-    // Rank scores
     const rankedScores = Array.from(sumByUser.entries()).sort((
       [, score1],
       [, score2],
     ) => score2 - score1);
 
-    // Positions
     const positions: UserScores = new Map();
     let currentPos = 1;
     let currentScore = NaN;
@@ -110,6 +214,48 @@ export class ScoreManager {
     }
 
     return positions;
+  }
+
+  public getAvailableYears(includeYear?: number): number[] {
+    const years = new Set<number>();
+
+    for (const score of this.getScores()) {
+      const year = this.getYearFromClosedAt(score.closed_at);
+
+      if (year !== null) {
+        years.add(year);
+      }
+    }
+
+    if (includeYear) {
+      years.add(includeYear);
+    }
+
+    return Array.from(years).sort((a, b) => b - a);
+  }
+
+  public getUserScoresByYear(
+    status: Status,
+    year: number,
+    includeUndated = false,
+  ): UserScores {
+    const yearScores = this.getScores().filter((score) => {
+      const scoreYear = this.getYearFromClosedAt(score.closed_at);
+      return scoreYear === year || (includeUndated && scoreYear === null);
+    });
+
+    return this.buildUserScores(status, yearScores);
+  }
+
+  public getUserScores(status: Status): UserScores {
+    const scores = this.getScores();
+
+    // Skip fast if no scores to process
+    if (scores.length === 0) {
+      return new Map();
+    }
+
+    return this.buildUserScores(status, scores);
   }
 
   public addScore(score: Score): void {

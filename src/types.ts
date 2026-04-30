@@ -11,6 +11,7 @@ export type Score = {
   user: User;
   score: number;
   processed: boolean;
+  closed_at: string | null;
 };
 
 export type aUserScores = {
@@ -34,6 +35,7 @@ export type Pull = {
   merged: boolean;
   assignee: User;
   user: User;
+  closed_at: string | null;
 };
 
 export type Issue = {
@@ -43,6 +45,7 @@ export type Issue = {
   state_reason: "completed" | "duplicate" | "not_planned" | "reopened" | null;
   assignee: User;
   user: User;
+  closed_at: string | null;
 };
 
 export type Status = "active" | "inactive";

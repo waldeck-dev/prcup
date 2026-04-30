@@ -5,6 +5,7 @@ import { Score, User } from "./types.ts";
 import { Pull } from "./types.ts";
 import { Issue } from "./types.ts";
 import { PageGenerator } from "../ui/generator.ts";
+import type { GeneratorData } from "../ui/generator.ts";
 
 const PULL_OK = parseInt(Deno.env.get("PULL_OK") || "3");
 const PULL_NOK = parseInt(Deno.env.get("PULL_NOK") || "-3");
@@ -87,6 +88,7 @@ export class PrCupWorker {
       user: this.formatUserData(item.assignee || item.user),
       score: this.calculateScore(item, processed),
       processed,
+      closed_at: item.closed_at,
     };
   }
 
@@ -121,14 +123,34 @@ export class PrCupWorker {
     // Save to file
     this.scoreManager.writeScores();
 
+    const selectedYear = new Date().getUTCFullYear();
+    const availableYears = this.scoreManager.getAvailableYears(selectedYear);
+
+    const rankedScoresByYear = availableYears.map((year) => ({
+      year,
+      rankedScores: {
+        active: this.scoreManager.getUserScoresByYear(
+          "active",
+          year,
+          year === selectedYear,
+        ),
+        inactive: this.scoreManager.getUserScoresByYear(
+          "inactive",
+          year,
+          year === selectedYear,
+        ),
+      },
+    }));
+
+    const pageData: GeneratorData = {
+      selectedYear,
+      availableYears,
+      rankedScoresByYear,
+      nextTarget: this.getNextTarget(latestItem),
+    };
+
     // Generate static pages
     const gen = new PageGenerator(this.repository);
-    gen.generatePage("scores.njk", {
-      rankedScores: {
-        active: this.scoreManager.getUserScores("active"),
-        inactive: this.scoreManager.getUserScores("inactive"),
-      },
-      nextTarget: this.getNextTarget(latestItem),
-    });
+    gen.generatePage("scores.njk", pageData);
   }
 }

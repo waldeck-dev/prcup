@@ -7,9 +7,14 @@ const OUTPUT_DIR = path.join(BASE_DIR, "out");
 
 type TEMPLATES = "scores.njk";
 
-type GeneratorData = {
+export type GeneratorData = {
   nextTarget: number | null;
-  rankedScores: Record<Status, UserScores>;
+  selectedYear: number;
+  availableYears: number[];
+  rankedScoresByYear: Array<{
+    year: number;
+    rankedScores: Record<Status, UserScores>;
+  }>;
 };
 
 export class PageGenerator {
@@ -32,8 +37,19 @@ export class PageGenerator {
       path.join(this.templateDir, template),
       {
         nextTarget: data.nextTarget,
-        rankedScoresActive: this.prepareScoreData(data.rankedScores.active),
-        rankedScoresInactive: this.prepareScoreData(data.rankedScores.inactive),
+        selectedYear: data.selectedYear,
+        availableYears: data.availableYears,
+        rankedScoresByYear: data.rankedScoresByYear.map((yearData) => ({
+          year: yearData.year,
+          rankedScoresActive: this.prepareScoreData(
+            yearData.rankedScores.active,
+          ),
+          rankedScoresInactive: this.prepareScoreData(
+            yearData.rankedScores.inactive,
+          ),
+          hasActiveScores: yearData.rankedScores.active.size > 0,
+          hasInactiveScores: yearData.rankedScores.inactive.size > 0,
+        })),
       },
     );
     this.writePage(
